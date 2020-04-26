@@ -21,6 +21,7 @@ export default class TourList extends Component {
   const { tours } = this.state
   return (
    <section className="tour-list">
+    <h2>Choose your next destination</h2>
     {tours.map(tour => (<Tour key={tour.id} tour={tour} removeTour={this.removeTour} />))}
    </section>
   )
