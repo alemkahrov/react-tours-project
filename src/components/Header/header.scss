@@ -1,0 +1,36 @@
+@import "../../index.scss";
+
+.header {
+ background-color: $color-black;
+ padding: 0 2em;
+ &-inner {
+  display: flex;
+  align-items: center;
+ }
+ .nav {
+  margin-left: auto;
+  .nav-list {
+   display: flex;
+   list-style-type: none;
+   li {
+    
+    .nav-link {
+     color: $color-white;
+     font-size: 1rem;
+     font-weight: bold;
+     text-transform: capitalize;
+     text-decoration: none;
+     
+     padding: 1em 0.7em;
+     display: block;
+     &:hover {
+      background-color: $color-green;
+     }
+    }
+    .nav-link.active {
+      background-color: $color-green;
+     }
+   }
+  }
+ }
+}
