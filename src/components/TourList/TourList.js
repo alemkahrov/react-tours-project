@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import Tour from '../Tour'
 import tourData from '../../tourData'
-import './tour-list.scss'
+import Tour from '../Tour'
+import "./tourList.scss"
 
 export default class TourList extends Component {
  constructor(props) {
@@ -9,20 +9,22 @@ export default class TourList extends Component {
   this.state = {
    tours: tourData
   }
- }
+ };
 
- // Method
+ // Methods
  removeTour = (id) => {
   const sortedTours = this.state.tours.filter(tour => tour.id !== id);
-  this.setState({ tours: sortedTours })
+  this.setState({
+   tours: sortedTours
+  })
  }
 
  render() {
   const { tours } = this.state
   return (
-   <section className="tour-list">
-    <h2>Choose your next destination</h2>
-    {tours.map(tour => (<Tour key={tour.id} tour={tour} removeTour={this.removeTour} />))}
+   <section className="tourList">
+    <h2 className="section-title">Choose your next destination</h2>
+    {tours.map(tour => (<Tour key={tour.id} info={tour} removeTour={this.removeTour} />))}
    </section>
   )
  }

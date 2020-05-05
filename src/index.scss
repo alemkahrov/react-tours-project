@@ -21,7 +21,7 @@ body {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
   display: block;
 }
 
@@ -29,6 +29,11 @@ img {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 20px;
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 

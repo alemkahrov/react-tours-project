@@ -1,36 +1,86 @@
 @import "../../index.scss";
 
 .header {
- background-color: $color-black;
- padding: 0 2em;
- &-inner {
+background-color: $color-black;
+
+.header-inner {
+ padding: 1rem 0 0;
+ 
+ @media screen and (min-width: 620px) {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+ }
+ .logo-box {
+  
+  @media screen and (min-width: 620px) {
+   padding-left: 1.4rem;
+  }
+   img {
+   width: 200px;
+   margin: 0 auto;
+  }
  }
  .nav {
   margin-left: auto;
+  
+  @media screen and (min-width: 620px) {
+   margin-top: 0;
+  }
   .nav-list {
-   display: flex;
-   list-style-type: none;
-   li {
-    
-    .nav-link {
-     color: $color-white;
-     font-size: 1rem;
-     font-weight: bold;
-     text-transform: capitalize;
-     text-decoration: none;
-     
-     padding: 1em 0.7em;
-     display: block;
-     &:hover {
-      background-color: $color-green;
-     }
-    }
-    .nav-link.active {
-      background-color: $color-green;
-     }
+   text-align: center;
+   list-style: none;
+   padding: 1rem 0;
+
+   @media screen and (min-width: 620px) {
+    display: flex;
+    padding: 0;
    }
   }
+  li {
+   margin-bottom: 1.2rem;
+   transition: $mainTransition;
+   &:last-child {
+    margin-bottom: 0;
+   }
+   &:hover {
+    color: $color-green;
+   }
+
+   @media screen and (min-width: 620px) {
+    &:hover {
+    background-color: $color-green;
+    }
+    margin-bottom: 0;
+   }
+  }
+  .nav-link {
+   color: $color-white;
+   font-size: 0.9rem;
+   font-weight: bold;
+   text-decoration: none;
+   padding: 0.4rem;
+   display: block;
+   &:hover {
+    color: $color-green;
+   }
+   &.active {
+    color: $color-green;
+   }
+   
+   @media screen and (min-width: 620px) {
+    padding: 1.2rem 1.4rem;
+    &:hover {
+     color: $color-white;
+    }
+    &.active {
+    background-color: $color-green;
+    color: $color-white;
+   }
+   }
+  }
+  
  }
+}
 }
